@@ -1,0 +1,23 @@
+[[source]]
+name = "pypi"
+url = "https://pypi.org/simple"
+verify_ssl = true
+
+[dev-packages]
+
+[packages]
+beautifulsoup4 = "*"
+requests = "*"
+pandas = "*"
+sqlalchemy = "*"
+ipython = "*"
+selenium = "*"
+yapf = "*"
+gspread = "*"
+oauth2client = "*"
+gspread-dataframe = "*"
+gspread-formatting = "*"
+numpy = "*"
+
+[requires]
+python_version = "3.7"
