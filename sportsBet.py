@@ -4,7 +4,7 @@ from selenium import webdriver
 
 chrome_driver_path = r'C:/Users/victo/workspace/WebScrapping_Bets/resources/chromedriver.exe'
 
-url = 'https://www.sportsbet.com.au/betting/rugby-league/nrl/parramatta-eels-v-melbourne-storm-5720350'
+url = 'https://www.sportsbet.com.au/betting/rugby-league/nrl/penrith-panthers-v-melbourne-storm-57306320'
 #url = 'https://www.sportsbet.com.au/betting/rugby-league/nrl/St-George-Illawarra-Dragons-v-Cronulla-Sharks-5524780'
 #url = 'https://www.tab.com.au/sports/betting/Rugby%20League/competitions/NRL/matches/St%20George%20Ill%20v%20Cronulla?betOption=undefined'
 # tab
@@ -22,7 +22,7 @@ driver.get(url)
 
 # maybe: priceButtonContainer_f18m2cag
 first_try_scorer_sports_bet = driver.find_elements_by_class_name(
-    'buttonContainer_f15d9r2b')
+    'priceButtonContentSingleLine_f2o3bd8')
 print(len(first_try_scorer_sports_bet[0].text))
 print(first_try_scorer_sports_bet[0].text)
 print(first_try_scorer_sports_bet[1].text)
