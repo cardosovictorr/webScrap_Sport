@@ -14216,66 +14216,34 @@ markets_in_json = '''
 # So I can work with it tranforming it in either dictonaries or lists
 data = json.loads(markets_in_json)
 
-# here we are just checking what kind of data we have received from the JSON content. It will be a lists
-# print("----------------")
-# print()
-# print()
-# print("JSON content data type and length: ")
-# print(type(data))
-# print(len(data))
-# print("----------------")
-# print()
-
 # converting the first index of the list in a dictionary, where I can find the First Tryscorer data.
 first_tryscorer_dict = dict(data[0])
-#print("First Tryscorer data type and length: ")
-# print(type(first_tryscorer_dict))
-# print(len(first_tryscorer_dict))
-# print("----------------")
-# print()
-# converting the second index of the list in a dictionary, where I can find the Anytime Tryscorer data.
 anytime_tryscorer_dict = dict(data[1])
-#print("Anytime Scorer data type and length: ")
-# print(type(anytime_tryscorer_dict))
-# print(len(anytime_tryscorer_dict))
-# print("----------------")
-# print()
 
-# Here I am printing the data keys of the dictionary so I know how to access the data I want.
-# In this case, I will want to access the data NAME that gives me the ANYTIME SCORER, however, it will be a list nested wich I will have to treat later
-# print("Anytime Scorer keys: ")
-# print(anytime_tryscorer_dict.keys())
-# print("----------------")
-# print()
+# Accessing the NAME key where it will show what MARKET I am printing
+print("NAME SELECTION: ")
+print(first_tryscorer_dict.get("name"))
+
+# As said before, I need to get the list nested and transform in a dictionary. So I can access the data.Here I am checking what I have inside the "selections" key and after I am tranforming in a python dict
+first_tryscorer = first_tryscorer_dict.get("selections")
+dictionary_values_of_first_tryscorer = dict(first_tryscorer[0])
+
+for x in range(len(first_tryscorer)):
+    player_first_try_scorer_dict = dict(first_tryscorer[x])
+    print(player_first_try_scorer_dict.get("name"))
+    player_market_dict = dict(player_first_try_scorer_dict.get("price"))
+    print(player_market_dict.get("winPrice"))
+    print()
+    print("----------------")
+    print()
 
 # Accessing the NAME key where it will show what MARKET I am printing
 print("NAME SELECTION: ")
 print(anytime_tryscorer_dict.get("name"))
 
-# print(anytime_tryscorer_dict.get("selections"))
-
 # As said before, I need to get the list nested and transform in a dictionary. So I can access the data.Here I am checking what I have inside the "selections" key and after I am tranforming in a python dict
 anytime_tryscrore = anytime_tryscorer_dict.get("selections")
-# print(type(anytime_tryscrore))
-# print(len(anytime_tryscrore))
-
-
-# Here I am trying the first index of the dict, that will give me the first player. The idea is to check so I can later just
-# do a loop to get those
-
-
 dictionary_values_of_tryscorer = dict(anytime_tryscrore[0])
-# print("Type of dictionary_values_of_tryscorer: ")
-# print(type(dictionary_values_of_tryscorer))
-# print(dictionary_values_of_tryscorer)
-# print(dictionary_values_of_tryscorer.get("name"))
-# # print(dictionary_values_of_tryscorer.get("price"))
-# new_dict = dict(dictionary_values_of_tryscorer.get("price"))
-# print(new_dict.get("winPrice"))
-# # print(dictionary_values_of_tryscorer.get("price"))
-# print()
-# print("----------------")
-# print()
 
 for x in range(len(anytime_tryscrore)):
     player_dict = dict(anytime_tryscrore[x])
