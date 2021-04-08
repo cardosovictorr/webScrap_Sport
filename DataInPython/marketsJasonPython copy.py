@@ -14224,9 +14224,11 @@ anytime_tryscorer_dict = dict(data[1])
 print("NAME SELECTION: ")
 print(first_tryscorer_dict.get("name"))
 
-# As said before, I need to get the list nested and transform in a dictionary. So I can access the data.Here I am checking what I have inside the "selections" key and after I am tranforming in a python dict
+# As said before, I need to get the list nested and transform in a dictionary.
+# So I can access the data.Here I am checking what I have inside the "selections" key and after I am tranforming in a python dict
 first_tryscorer = first_tryscorer_dict.get("selections")
 dictionary_values_of_first_tryscorer = dict(first_tryscorer[0])
+print()
 
 for x in range(len(first_tryscorer)):
     player_first_try_scorer_dict = dict(first_tryscorer[x])
@@ -14244,6 +14246,7 @@ print(anytime_tryscorer_dict.get("name"))
 # As said before, I need to get the list nested and transform in a dictionary. So I can access the data.Here I am checking what I have inside the "selections" key and after I am tranforming in a python dict
 anytime_tryscrore = anytime_tryscorer_dict.get("selections")
 dictionary_values_of_tryscorer = dict(anytime_tryscrore[0])
+print()
 
 for x in range(len(anytime_tryscrore)):
     player_dict = dict(anytime_tryscrore[x])
