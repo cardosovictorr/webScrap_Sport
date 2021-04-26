@@ -20263,3 +20263,27 @@ for x in range(len(first_tryscorer)):
     print()
     print("----------------")
     print()
+
+
+# def players_function():
+#     player_name = ""
+#     player_first_tryscorer = 0
+#     player_dictionary = {}
+#     for x in range(len(first_tryscorer)):
+#         first_try_scorer_dict = dict(first_tryscorer[x])
+#         # print(first_try_scorer_dict.get("name"))
+#         player_name = first_try_scorer_dict.get("name")
+#         player_first_tryscorer = dict(first_try_scorer_dict.get("price"))
+#         # print(player_market_dict.get("winPrice"))
+#         # print()
+#         # print("----------------")
+#         # print()
+#         player_dictionary.update(
+#             {"player_name": player_name, "player_first_tryscorer": player_first_tryscorer})
+#         print(player_dictionary)
+
+#     return player_dictionary
+
+
+# print("DATA FROM FUNCTION: ")
+# print("-------")
