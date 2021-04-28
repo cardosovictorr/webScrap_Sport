@@ -1,8 +1,14 @@
 import json
 
+# Database connection:
+# DB_HOST = "localhost"
+# DB_NAME = "Adv_Studio_Stock_Bot"
+# DB_USER = "my_user"
+# DB_PASS = "root"
+
 # open json File
 
-f = open('./SportsBet_Data_in_Json/March/MarketsInJson/Markets23March2021.json',)
+f = open('./Markets23March2021.json')
 
 data = json.load(f)
 
